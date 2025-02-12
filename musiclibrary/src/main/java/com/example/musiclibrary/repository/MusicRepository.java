@@ -29,7 +29,7 @@ public class MusicRepository {
         try (Connection connection = DatabaseConnection.getConnection();
              PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setString(1, music.getTitle());
-            stmt.setInt(2, music.getDuration());
+            stmt.setDouble(2, music.getDuration());
             stmt.setLong(3, music.getArtistId());
             stmt.executeUpdate();
         }

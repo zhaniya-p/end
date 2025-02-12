@@ -2,8 +2,8 @@ package com.example.musiclibrary.controller;
 
 import com.example.musiclibrary.model.Music;
 import com.example.musiclibrary.service.MusicService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.sql.SQLException;
 import java.util.List;
 
@@ -12,6 +12,7 @@ import java.util.List;
 public class MusicController {
     private final MusicService musicService;
 
+    @Autowired
     public MusicController(MusicService musicService) {
         this.musicService = musicService;
     }
